@@ -5,6 +5,7 @@ import CartPage from "../features/phones/pages/CartPage";
 import FavoritesPage from "../features/phones/pages/FavoritesPage";
 import PhoneDetailsPage from "../features/phones/pages/PhoneDetailsPage";
 import ErrorPage from "../pages/ErrorPage";
+import AboutPage from "../pages/AboutPage";
 
 export const AppRoutes = createBrowserRouter([
     {
@@ -14,7 +15,8 @@ export const AppRoutes = createBrowserRouter([
         children: [
             {
                 index: true,
-                Component: HomePage
+                Component: HomePage,
+                loader: () => fetch('../phones.json')
             },
             {
                 path: 'phone-details/:id',
@@ -27,6 +29,10 @@ export const AppRoutes = createBrowserRouter([
             {
                 path: 'favorites',
                 Component: FavoritesPage
+            },
+            {
+                path: 'About',
+                Component: AboutPage
             }
         ]
     },

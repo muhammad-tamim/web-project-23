@@ -1,14 +1,16 @@
 import React from 'react';
 import Hero from '../shared/components/structure/Hero';
-import Phones from '../features/phones/components/Phones/Phones';
+import PhonesContainer from '../features/phones/components/PhonesContainer/PhonesContainer';
+import { useLoaderData } from 'react-router';
 
 const HomePage = () => {
+    const data = useLoaderData()
     return (
         <div>
             <Hero></Hero>
-            <Phones></Phones>
+            <PhonesContainer phones={data}></PhonesContainer>
         </div>
     );
 };
 
-export default HomePage;
+export default HomePage; 
