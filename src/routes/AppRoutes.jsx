@@ -22,7 +22,9 @@ export const AppRoutes = createBrowserRouter([
             },
             {
                 path: 'phone-details/:id',
-                Component: PhoneDetailsPage
+                Component: PhoneDetailsPage,
+                loader: () => fetch('../phones.json'),
+                hydrateFallbackElement: <LoadingSpinner></LoadingSpinner>
             },
             {
                 path: 'cart',
