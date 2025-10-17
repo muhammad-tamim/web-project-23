@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useLoaderData, useParams } from 'react-router';
 import { MdAddShoppingCart, MdBookmarkAdd } from 'react-icons/md'
 import Button from '../../../shared/components/ui/Button';
-import { addFavoritesToLocalStorage } from '../utils/utils';
+import { addCartToLocalStorage, addFavoritesToLocalStorage, getCartToLocalStorage } from '../utils/utils';
+import { CartContext } from '../../../context/CartContext';
 
 const PhoneDetailsPage = () => {
+
+    const { setCart } = useContext(CartContext)
+
     const data = useLoaderData()
     const { id } = useParams()
 
@@ -15,6 +19,12 @@ const PhoneDetailsPage = () => {
         addFavoritesToLocalStorage(singlePhone)
     }
 
+
+    const handleCart = () => {
+        addCartToLocalStorage(singlePhone)
+        setCart(getCartToLocalStorage())
+    }
+
     return (
         <div className='w-full py-12'>
             <img src={image} className='w-full mx-auto md:w-auto  mb-8' alt='' />
@@ -22,7 +32,7 @@ const PhoneDetailsPage = () => {
                 <h1 className='text-6xl font-thin mb-8'>{name}</h1>
                 <div className='space-x-2'>
                     <Button
-                        // onClick={handleCart}
+                        onClick={handleCart}
                         label={<MdAddShoppingCart />}
                     />
                     <Button
