@@ -14,6 +14,8 @@ https://web-project-23.netlify.app/
 
 ## Project Video:
 
+https://github.com/user-attachments/assets/67204936-4c00-4923-a49e-0d50d08b42a1
+
 ## What I Learned New while Building This Project:
 
 1. How to solve netlify page not found issue for react-router dynamic routes after re-fresh:
