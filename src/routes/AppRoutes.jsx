@@ -6,6 +6,7 @@ import FavoritesPage from "../features/phones/pages/FavoritesPage";
 import PhoneDetailsPage from "../features/phones/pages/PhoneDetailsPage";
 import ErrorPage from "../pages/ErrorPage";
 import AboutPage from "../pages/AboutPage";
+import LoadingSpinner from "../shared/components/ui/LoadingSpinner";
 
 export const AppRoutes = createBrowserRouter([
     {
@@ -16,7 +17,8 @@ export const AppRoutes = createBrowserRouter([
             {
                 index: true,
                 Component: HomePage,
-                loader: () => fetch('../phones.json')
+                loader: () => fetch('../phones.json'),
+                hydrateFallbackElement: <LoadingSpinner></LoadingSpinner>
             },
             {
                 path: 'phone-details/:id',
