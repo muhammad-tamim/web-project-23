@@ -1,8 +1,16 @@
-# Project Name:
+## Project Name: FlagshipFaceOff 
 
 ## Project Description:  
+FlagShipFaceOff is a demo mobile store website that I built to practice React Router concepts such as routing, dynamic routing, nested routing, error handling, and data loading etc.
+
+## Features:
+- Display all phone data on the homepage
+- View detailed information for each phone 
+- Add phones to Favorites and Cart
 
 ## Live Site Link:
+
+https://web-project-23.netlify.app/
 
 ## Project Video:
 
@@ -16,7 +24,11 @@ public/_redirects:
 /* /index.html 200
 ```
 
-## Challenges I faced while Building This Project:
+1. How to use devDojo tailwind css buttons and KitWind ui components: 
+
+https://devdojo.com/tailwindcss/buttons#_
+
+https://kitwind.io/products/kometa/components
 
 
 ## Contact With Me: 
